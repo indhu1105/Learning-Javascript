@@ -1,0 +1,1 @@
+alert("the script content into an external file ");
