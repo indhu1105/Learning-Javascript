@@ -1,0 +1,24 @@
+<!-- Boolean conversion
+Follows the rules:
+
+Value                          	Becomes…
+0, null, undefined, NaN, ""	    false
+any other value	                 true
+
+
+Most of these rules are easy to understand and memorize. The notable exceptions where people usually make mistakes are:
+
+undefined is NaN as a number, not 0.
+"0" and space-only strings like " " are true as a boolean.
+ -->
+ <html>
+     <script>
+         alert(Boolean(0));
+         alert(Boolean(null));
+         alert(Boolean(undefined));
+         alert(Boolean(NaN));
+         alert(Boolean(""));
+         alert(Boolean(" "));
+         alert(Boolean("0"));
+     </script>
+ </html>
