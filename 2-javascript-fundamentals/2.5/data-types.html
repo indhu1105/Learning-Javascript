@@ -1,0 +1,41 @@
+<!-- A variable in JavaScript can contain any data. A variable can at one moment be a string and at another be a number
+Programming languages that allow such things are called “dynamically typed” -->
+
+
+<!-- There are 8 basic data types in JavaScript.
+
+1.number: for numbers of any kind: integer or floating-point, integers are limited by ±253.
+2.bigint: is for integer numbers of arbitrary length.
+       the "n" at the end means it's a BigInt
+
+3.string: for strings. A string may have one or more characters, there’s no separate single-character type.
+
+     Double quotes: "Hello".
+    Single quotes: 'Hello'.
+    Backticks: `Hello`.
+Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}
+
+
+
+4.boolean :for true/false.
+5.null: for unknown values – a standalone type that has a single value null.
+6.undefined :for unassigned values – a standalone type that has a single value undefined.
+7.object: for more complex data structures.
+      symbol: for unique identifiers.
+
+8.The typeof operator allows us to see which type is stored in a variable.
+
+Two forms: typeof x or typeof(x).
+Returns a string with the name of the type, like "string".
+For null returns "object" – this is an error in the language, it’s not actually an object. -->
+
+
+<html>
+    <script>
+        let name="indhu";
+        alert("hello ${name}");
+        alert(`hello ${name}`);
+     //   alert("hello ${"name"}"); wrong
+        alert('hello ${name}');
+    </script>
+</html>
