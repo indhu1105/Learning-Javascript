@@ -1,0 +1,35 @@
+<html>
+    <!-- 
+        Assignment "=":The call x = value writes the value into x and then returns it.
+        Remainder "%" :The result of a % b is the remainder of the integer division of a by b.
+        Exponential "**" :the result of a ** b is a multiplied by itself b times.
+        Increment ++ increases a variable by 1
+        Decrement -- decreases a variable by 1
+            Increment/decrement can only be applied to variables. Trying to use it on a value like 5++ will give an error.
+        Bitwise operator:
+            AND ( & )
+            OR ( | )
+            XOR ( ^ )
+            NOT ( ~ )
+            LEFT SHIFT ( << )
+            RIGHT SHIFT ( >> )
+            ZERO-FILL RIGHT SHIFT ( >>> )
+        Comma ","
+           The comma operator allows us to evaluate several expressions, dividing them with a comma ,. Each of them is evaluated but only the result of the last one is returned.
+
+        Modify in place:
+            need to apply an operator to a variable and store the new result in that same variable.
+
+     -->
+    <script>
+        //modify in place
+        let n=2;
+       alert(n=n*2); //4
+       alert(n*=2); //8
+        alert(n*=3+5); //64
+        //comma
+        let x=(1+2,3+4);//7
+        alert(x);
+
+    </script>
+</html>
