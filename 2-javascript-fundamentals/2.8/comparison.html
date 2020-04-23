@@ -1,0 +1,22 @@
+<html>
+    <!-- Comparison operators return a boolean value.
+Strings are compared letter-by-letter in the “dictionary” order.
+When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
+The values null and undefined equal == each other and do not equal any other value.
+Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
+ -->
+ <script>
+     let x=2;
+     let y=4;
+     alert(x>y); //false result will be in boolean
+     alert("z">"a"); //true
+     alert("A">"a"); //false
+    //  Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). 
+    alert("Glow">"gee"); //false
+    alert("Glow">"Gee"); //true
+    alert("12">2);//false
+    alert("12">"2"); //false
+    alert("11">"1"); //true
+
+ </script>
+</html>

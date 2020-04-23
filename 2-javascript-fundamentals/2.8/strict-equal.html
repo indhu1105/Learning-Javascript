@@ -1,0 +1,13 @@
+<html>
+    <!-- "===" vs "==" -->
+    <script>
+        // "=="
+        //This happens because operands of different types are converted to numbers by the equality operator ==. An empty string, just like false, becomes a zero.
+        alert(''==false); //true
+        alert(0==false); //true
+        // "==="
+        // A strict equality operator === checks the equality without type conversion.
+             //In other words, if a and b are of different types, then a === b immediately returns false without an attempt to convert them.
+        alert(''===false); //false
+    </script>
+</html>

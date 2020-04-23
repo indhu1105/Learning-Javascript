@@ -1,0 +1,24 @@
+<html>
+    <!-- comparison with null and undefined -->
+    <script>
+      //  For a strict equality check "==="
+          //These values are different, because each of them is a different type.
+
+              alert( null === undefined ); // false
+
+      // For a non-strict check ==
+          //There’s a special rule. These two are a “sweet couple”: they equal each other (in the sense of ==), but not any other value.
+
+              alert( null == undefined ); // true  
+
+      //    For maths and other comparisons < > <= >=
+            //null/undefined are converted to numbers: null becomes 0, while undefined becomes NaN.
+
+           alert(null==0); //false The equality check returns false because null only equals null, undefined, and no other value.
+           alert(undefined==0); //false The equality check and returns false because undefined only equals null, undefined, and no other value.
+           alert(null>=0);//true 0>=0
+           alert(null>0);//false 0>0
+           alert(undefined>0);  //false NaN>0
+           alert(undefined>=0); //false NaN>=0
+    </script>
+</html>
