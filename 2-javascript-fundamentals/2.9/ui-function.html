@@ -1,0 +1,35 @@
+<html>
+    <!-- Interaction: alert, prompt, confirm
+        There are two limitations shared by all the methods above:
+
+     1.The exact location of the modal window is determined by the browser. Usually, it’s in the center.
+     2.The exact look of the window also depends on the browser. We can’t modify it 
+    -->
+
+
+    <!-- The mini-window with the message is called a modal window.  -->
+
+    <script>
+        //alert: This shows a message and pauses script execution until the user presses “OK”.
+         alert("hello");
+
+         /*prompt:
+
+             The function prompt accepts two arguments:
+                 result = prompt(title, [default]);
+
+    It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+       1.title : The text to show the visitor.
+       2.default : An optional second parameter, the initial value for the input field.
+             prompts to look good in IE, we recommend always providing the second argument.
+       */
+          let grow=prompt("Hi this is indhu!!!",'17');
+          alert(`you are ${grow} years old`);
+
+        // confirm :
+             // shows a message and waits for the user to press “OK” or “Cancel”. It returns true for OK and false for Cancel/Esc.
+          let age=confirm("ok or not");
+          alert(`you are a baby ${age}`);
+
+    </script>
+</html>
