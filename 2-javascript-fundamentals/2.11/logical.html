@@ -1,0 +1,73 @@
+<html>
+    <!-- Logical Operators
+         1. OR ||
+         2. AND &&
+         3. NOT ! 
+
+     -->
+     <!-- OR 
+         The OR || operator does the following:
+
+            Evaluates operands from left to right.
+            For each operand, converts it to boolean. If the result is true, stops and returns the original value of that operand.
+            If all operands have been evaluated (i.e. all were false), returns the last operand.
+            A value is returned in its original form, without the conversion.
+
+            In other words, a chain of OR "||" returns the first truthy value or the last one if no truthy value is found.
+
+    -->
+
+    <!--  AND 
+
+         The AND && operator does the following:
+
+                Evaluates operands from left to right.
+                For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+                If all operands have been evaluated (i.e. all were truthy), returns the last operand.
+                In other words, AND returns the first falsy value or the last value if none were found.
+
+                The rules above are similar to OR. The difference is that AND returns the first falsy value while OR returns the first truthy one.
+
+     -->
+
+     <!-- NOT
+          The operator accepts a single argument and does the following:
+
+              1.  Converts the operand to boolean type: true/false.
+              2.  Returns the inverse value.
+
+
+           EQUALENT TO BOOLEAN
+                  
+                A double NOT !! is sometimes used for converting a value to boolean type
+    -->
+     <script>
+        //  short circuit evaluation
+          let x;
+          if(true || (x=1));
+          alert(x); //undefined
+          if(false || (x=1));
+          alert(x); // 1
+
+
+        //   OR
+              //  In other words, a chain of OR "||" returns the first truthy value or the last one if no truthy value is found.
+          alert( null || 2 || undefined );//2 
+
+          alert( alert(1) || 2 || alert(3) ); // 1 and then 2 because alert(undefines || 2 || alert(3)) so print the truthy value "2"
+
+
+
+          //NOT
+              //    The difference is that AND returns the first falsy value while OR returns the first truthy one.
+        alert(null && "hllo" && true) //null
+
+        alert( alert(1) && alert(2) ); //1 ,undefined
+
+           // result of AND ,OR
+
+         //  AND have the high priority 
+           alert( null || 2 && 3 || 4 ); // 3 alert(null || 3 || 4) 
+
+     </script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <!-- Check the range between
+
+        Write an “if” condition to check that age is between 14 and 90 inclusively.
+
+        “Inclusively” means that age can reach the edges 14 or 90.
+     -->
+     <!--  Check the range outside
+
+            Write an if condition to check that age is NOT between 14 and 90 inclusively.
+
+            Create two variants: the first one using NOT !, the second one – without it.
+      -->
+    <script>
+        //Check the range between
+        let age=prompt("enter ypur age",14);
+        if(age>=14 && age<=90)
+        alert("You are correct");
+        //Check the range outside
+        let grow=prompt("enter your age",12);
+        //first variant
+        if(!(grow>=14 && grow<=90))
+        alert("using NOT ope");
+        //second variant
+        if(grow<14 && grow>90)
+            alert("correct");
+</script>
+</html>

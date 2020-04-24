@@ -1,0 +1,12 @@
+<!-- Which of these alerts are going to execute?
+
+What will the results of the expressions be inside if(...)?
+
+ -->
+ <html>
+     <script>
+         if (-1 || 0) alert( 'first' ); //first
+         if (-1 && 0) alert( 'second' ); //not print
+         if (null || -1 && 1) alert( 'third' ); //third
+     </script>
+ </html>
