@@ -1,0 +1,25 @@
+<html>
+    <!-- We covered 3 types of loops:
+
+1.while – The condition is checked before each iteration.
+2.do..while – The condition is checked after each iteration.
+3.for (;;) – The condition is checked before each iteration, additional settings available.
+
+break:
+      To make an “infinite” loop, usually the while(true) construct is used. Such a loop, just like any other, can be stopped with the break directive.
+
+continue:
+      If we don’t want to do anything in the current iteration and would like to forward to the next one, we can use the continue directive.
+
+label:
+      break/continue support labels before the loop. A label is the only way for break/continue to escape a nested loop to go to an outer one.
+ -->
+    <script>
+    //What is the last value alerted by this code? Why?
+   //answer 1
+        let i = 3;
+        
+        while (i) {
+          alert( i-- );//3,2,1
+        }</script>
+</html>
