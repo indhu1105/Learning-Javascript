@@ -1,0 +1,28 @@
+<html>
+    <!-- 
+        Arrow functions are handy for one-liners. They come in two flavors:
+
+           1.Without curly braces:
+              (...args) => expression – the right side is an expression: the function evaluates it and returns the result.
+           2.With curly braces: 
+              (...args) => { body } – brackets allow us to write multiple statements inside the function, 
+                      but we need an explicit return to return something.
+
+    -->
+    <script>
+        // no parameter 
+        let show=()=>"hello";//()must
+        //1 parameter 
+        let print=n=>{
+            return n;
+        }
+        //eg for more than 1 parameter
+        let sum=(a,b,c) => {
+            return a+b+c};
+
+         alert(show());
+         alert(print(10));
+         alert(sum(1,2,3));   
+
+    </script>
+</html>
