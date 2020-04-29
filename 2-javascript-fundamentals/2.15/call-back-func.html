@@ -1,0 +1,20 @@
+<html>
+    <script>
+        let yes=function(){
+            alert("haha");
+        }
+        let no=function()
+        {
+            alert("you r a brillient");
+        }
+        ask("did you married",yes,no);
+        function ask(text,yes,no)
+        {
+            if(confirm(text)) yes();
+            else
+            no();
+        }
+        
+
+    </script>
+</html>

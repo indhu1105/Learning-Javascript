@@ -1,0 +1,36 @@
+<html>
+    <!-- Why is there a semicolon at the end?
+
+You might wonder, why does Function Expression have a semicolon ; at the end, but Function Declaration does not:
+
+  function sayHi() {
+  // ...
+  }
+
+let sayHi = function() {
+  // ...
+};
+The answer is simple:
+
+There’s no need for ; at the end of code blocks and syntax structures that use them like if { ... }, for { }, function f { } etc.
+A Function Expression is used inside the statement: let sayHi = ...;, as a value. It’s not a code block, but rather an assignment.
+
+The semicolon ; is recommended at the end of statements, no matter what the value is. 
+So the semicolon here is not related to the Function Expression itself, it just terminates the statement.
+ -->
+
+ <!-- Summary
+ 
+    1.Functions are values. They can be assigned, copied or declared in any place of the code.
+
+    2.If the function is declared as a separate statement in the main code flow, that’s called a “Function Declaration”.
+
+    3.If the function is created as a part of an expression, it’s called a “Function Expression”.
+
+    4.Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
+
+    5.Function Expressions are created when the execution flow reaches them.
+  -->
+    <script>
+    </script>
+</html>
