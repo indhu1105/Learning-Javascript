@@ -1,0 +1,44 @@
+Why we need tests?
+    =>When testing a code by manual re-runs, it’s easy to miss something.
+Automated testing :
+    => means that tests are written separately, in addition to the code. They run our functions in various ways and compare results with the expected.
+
+
+Behavior Driven Development (BDD)
+     BDD is three things 
+         1. As Tests – they guarantee that the code works correctly.
+         2.As Docs – the titles of describe and it tell what the function does.
+         3.As Examples – the tests are actually working examples showing how a function can be used.
+
+
+Specification
+  => description is called a specification or, in short, a spec, and contains descriptions of use cases together.
+        1.describe("title", function() { ... })
+             What functionality we’re describing. In our case we’re describing the function pow. Used to group “workers” – the it blocks.
+
+        2.it("use case description", function() { ... })
+              In the title of it we in a human-readable way describe the particular use case, and the second argument is a function that tests it.
+
+        3.assert.equal(value1, value2)
+             The code inside it block, if the implementation is correct, should execute without errors.
+
+JS Libraries for tests:
+   => Mocha 
+       the core framework: it provides common testing functions including describe and it and the main function that runs tests.
+   =>Chai
+       the library with many assertions. It allows to use a lot of different assertions, for now we need only assert.equal.
+   =>Sinon
+       a library to spy over functions, emulate built-in functions and more.
+
+before/after and beforeEach/afterEach:
+    =>beforeEach/afterEach : each iteration
+    =>before/after : only once (start and ending of the code).
+
+Other assertions:
+1. assert.isNaN: it checks for NaN.
+      There are other assertions in Chai as well, for instance:
+2.assert.equal(value1, value2) – checks the equality value1 == value2.
+3.assert.strictEqual(value1, value2) – checks the strict equality value1 === value2.
+4.assert.notEqual, assert.notStrictEqual – inverse checks to the ones above.
+5.assert.isTrue(value) – checks that value === true
+6.assert.isFalse(value) – checks that value === false
