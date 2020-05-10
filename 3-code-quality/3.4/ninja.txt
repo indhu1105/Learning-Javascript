@@ -1,0 +1,37 @@
+1.Brevity is the soul of wit
+2.One-letter variables(avoid)
+3.Use abbreviations
+    =>list → lst.
+    =>userAgent → ua.
+    =>browser → brsr.
+4.Soar high. Be abstract.
+    =>The ideal name for a variable is data. 
+    =>Name a variable by its type: str, num…
+    =>…But what if there are no more such names? Just add a number: data1, item2, elem5…
+
+5.Attention test
+    =>One of the ways – use similar variable names, like date and data.
+
+6.Smart synonyms
+    Eg.,
+     =>showMessage()
+     =>displayName()
+6.Reuse names
+    =>An advanced variant of the approach is to covertly (!) replace the value with something alike in the middle of a loop or a function.
+    => Deadly effective even against an experienced ninja.
+7.Underscores for fun
+     =>A smart ninja puts underscores at one spot of code and evades them at other places. 
+          That makes the code even more fragile and increases the probability of future errors.
+8.Show your love
+    =>Let everyone see how magnificent your entities are! Names like superElement, 
+          megaFrame and niceItem will definitely enlighten a reader.
+9.Overlap outer variables
+10.Side-effects everywhere!
+   => A really beautiful trick is to add a “useful” action to them, besides the main task.
+           An expression of dazed surprise on the face of your colleague when they see a function named is.., check.. or find... changing something – will definitely broaden your boundaries of reason.
+
+   =>Another way to surprise is to return a non-standard result.
+          Show your original thinking! Let the call of checkPermission return not true/false, but a complex object with the results of the check.
+11.Powerful functions!
+    =>Additional actions should not be obvious from the function name. A true ninja coder will make them not obvious from the code as well.
+    =>Joining several actions into one protects your code from reuse.
