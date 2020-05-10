@@ -1,0 +1,45 @@
+Syntax
+
+1.No space between the function name and parentheses between the parentheses and the parameter
+   eg function_name(x, y)
+2.Indentation 2 spaces
+3. => A space after for/if/while…
+          eg for ()
+   => } else { without a line break
+      if {
+
+      } else {
+
+      }
+4.Spaces around a nested call
+   eg alert( pow(x, y));
+5.An empty line between logical blocks
+    let x=0;
+
+    if () {
+
+    }
+6.Lines are not very long
+7.A semicolon ; is mandatory
+8.Spaces around operators
+   eg a + b;
+9.Curly brace { on the same line, after a space
+   for {
+
+   }
+10.A space between parameters
+ eg pow(x, y)
+
+
+Function
+    first function call next function declaration.
+
+Automated Linters
+
+    Most linters are integrated with many popular editors: just enable the plugin in the editor and configure the style.
+
+          =>  JSLint – one of the first linters.
+          =>  JSHint – more settings than JSLint.
+          =>  ESLint – probably the newest one.
+            
+
