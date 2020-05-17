@@ -1,0 +1,65 @@
+Object copying, references
+    =>A variable stores not the object itself, but its “address in memory”, in other words “a reference” to it.
+    =>When an object variable is copied – the reference is copied, the object is not duplicated.
+    =>The equality == and strict equality === operators for objects work exactly the same.
+         Two objects are equal only if they are the same object.
+
+Shallow copy:
+      =>To make a “real copy” (a clone) we can use Object.assign for the so-called “shallow copy” (nested objects are copied by reference) or a “deep cloning” function, such as _.cloneDeep(obj).
+
+
+Cloning and merging:
+  =>copying an object variable creates one more reference to the same object.
+  eg.,
+  let user = {
+  name: "John",
+  age: 30
+  };
+
+let clone = {}; // the new empty object
+
+// let's copy all user properties into it
+for (let key in user) {
+  clone[key] = user[key];
+}
+// now clone is a fully independent object with the same content
+clone.name = "Pete"; // changed the data in it
+alert( user.name ); // still John in the original object
+    
+Object.assign:   
+     syntax:
+       Object.assign(dest, [src1, src2, src3...])
+
+            =>The first argument dest is a target object.
+            =>Further arguments src1, ..., srcN (can be as many as needed) are source objects.
+            =>It copies the properties of all source objects src1, ..., srcN into the target dest. In other words, properties of all arguments starting from the second are copied into the first object.
+            =>The call returns dest.
+
+eg.,
+    It copies all properties of user into the empty object and returns it.
+
+    let user = {
+        name: "John",
+        age: 30
+        };
+let clone = Object.assign({}, user);
+
+
+Nested cloning:
+  eg.,
+    let user = {
+    name: "John",
+    sizes: {
+        height: 182,
+        width: 50
+    }
+    };
+
+let clone = Object.assign({}, user);
+
+alert( user.sizes === clone.sizes ); // true, same object
+
+// user and clone share sizes
+user.sizes.width++;       // change a property from one place
+alert(clone.sizes.width); // 51, see the result from the other one
+
