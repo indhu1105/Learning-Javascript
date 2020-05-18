@@ -1,0 +1,48 @@
+Garbage collection
+    =>There’s a background process in the JavaScript engine that is called garbage collector. 
+    =>It monitors all objects and removes those that have become unreachable.
+
+Reachability
+   =>The main concept of memory management in JavaScript is reachability.
+   =>Simply put, “reachable” values are those that are accessible or usable somehow. They are guaranteed to be stored in memory.
+
+         1.There’s a base set of inherently reachable values, that cannot be deleted for obvious reasons.
+                For instance:
+                   => Local variables and parameters of the current function.
+                   => Variables and parameters for other functions on the current chain of nested calls.
+                   => Global variables.
+                   => (there are some other, internal ones as well)
+                  These values are called roots.
+
+        2.Any other value is considered reachable if it’s reachable from a root by a reference or by a chain of references.
+
+Internal algorithms
+    =>The basic garbage collection algorithm is called “mark-and-sweep”.
+    STEPS:
+      1.The first step marks the roots
+      2.Then their references are marked
+      3.…And their references, while possible
+      4.Now the objects that could not be visited in the process are considered unreachable and will be removed
+
+Optimization
+   =>JavaScript engines apply many optimizations to make it run faster and not affect the execution.
+   =>Some of the optimizations:
+        1.Generational collection 
+           => Objects are split into two sets: “new ones” and “old ones”.
+           => Many objects appear, do their job and die fast, they can be cleaned up aggressively. 
+           => Those that survive for long enough, become “old” and are examined less often.
+        2.Incremental collection 
+           => If there are many objects, and we try to walk and mark the whole object set at once, it may take some time and introduce visible delays in the execution. 
+           => So the engine tries to split the garbage collection into pieces.
+           => Then the pieces are executed one by one, separately. 
+           => That requires some extra bookkeeping between them to track changes, but we have many tiny delays instead of a big one.
+        3.Idle-time collection 
+           =>The garbage collector tries to run only while the CPU is idle, to reduce the possible effect on the execution.
+        
+
+The main things to know:
+      => Garbage collection is performed automatically. We cannot force or prevent it.
+      => Objects are retained in memory while they are reachable.
+      => Being referenced is not the same as being reachable (from a root): a pack of interlinked objects can become unreachable as a whole.
+
+
