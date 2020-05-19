@@ -1,0 +1,42 @@
+<html>
+    <!-- 
+        Using "this" in object literal
+
+        Here the function makeUser returns an object.
+
+        What is the result of accessing its ref? Why?
+
+
+        That’s because rules that set this do not look at object definition. Only the moment of call matters.
+
+Here the value of this inside makeUser() is undefined, because it is called as a function, not as a method with “dot” syntax.
+
+        function makeUser() {
+        return {
+            name: "John",
+            ref: this
+        };
+        };
+
+        let user = makeUser();
+
+        alert( user.ref.name ); // What's the result?
+     -->
+    <script>
+        //Now it works, because user.ref() is a method.
+        //  And the value of this is set to the object before dot ..
+        function makeUser() {
+            return {
+                name: "John",
+                ref() {
+                return this;
+                }
+            };
+            };
+
+let user = makeUser();
+
+alert( user.ref().name ); // John
+
+    </script>
+</html>
